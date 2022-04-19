@@ -22,16 +22,17 @@
  * console.logging the function's return value
  */
 
-function analyzedColor(string) {
-    if (string === "blue"){
+function analyzedColor(color) {
+    if (color === "blue"){
         return " the sky is blue ";
-    } else if (string === "yellow") {
+    } else if (color === "yellow") {
         return " bananas are yellow ";
     } else {
-        return " I don't have that color, sorry";
+        return " I don't have " +color+ ", sorry";
     }
 }
 console.log(analyzedColor("blue"));
+console.log(analyzedColor("yellow"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -46,16 +47,16 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 //
-// function analyzedColor(randomColor) {
-//     if (randomColor === "blue"){
-//         return "the sky is blue";
-//     } else if (randomColor === "yellow") {
-//         return "bananas are yellow";
-//     } else {
-//         return "I dont have that color, sorry";
-//     }
-// }
-//     console.log(analyzedColor(randomColor));
+function analyzedColor(randomColor) {
+    if (randomColor === "blue"){
+        return "the sky is blue";
+    } else if (randomColor === "yellow") {
+        return "bananas are yellow";
+    } else {
+        return "I dont have that color, sorry";
+    }
+}
+    console.log(analyzedColor(randomColor));
 
 /**
  * TODO:
@@ -83,9 +84,9 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * function to show it to the user.
  */
 
-// let usercolor = prompt( "what is your favorite color" )
-//     alert( "your selected " + (usercolor) + "," + analyzedColor(usercolor))
-//
+let usercolor = prompt( "what is your favorite color" ).toLowerCase().trim();
+    alert( "your selected " + (usercolor) + "," + analyzedColor(usercolor))
+
 
 
     /* ########################################################################## */
@@ -110,25 +111,26 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
-// let luckyn =Math.floor((Math.random()*6))
-//     console.log (luckyn)
-// function calculateTotal(luckyn) {
-//     if (luckyn === 0) {
-//         return (tot)
-//     } else if (luckyn === 1) {
-//         return (tot-(tot * .1))
-//     } else if (luckyn === 2) {
-//         return (tot-(tot * .25))
-//     } else if (luckyn === 3) {
-//         return (tot-(tot *.35))
-//     } else if (luckyn === 4) {
-//         return (tot- (tot * .5))
-//     } else if (luckyn === 5) {
-//         return (tot-(tot))
-//     }}
-// let tot = prompt( "what is your total")
-//     alert (" your lucky number is " + luckyn);
-// alert ("your new total with your discount will be " + calculateTotal(luckyn))
+let luckyn =Math.floor((Math.random()*6))
+    console.log (luckyn)
+function calculateTotal(luckyn) {
+    if (luckyn === 0) {
+        return (tot)
+    } else if (luckyn === 1) {
+        return (tot-(tot * .1))
+    } else if (luckyn === 2) {
+        return (tot-(tot * .25))
+    } else if (luckyn === 3) {
+        return (tot-(tot *.35))
+    } else if (luckyn === 4) {
+        return (tot- (tot * .5))
+    } else if (luckyn === 5) {
+        return (tot-(tot))
+    } else
+    {return (total)}}
+let tot = prompt( "what is your total")
+    alert (" your lucky number is " + luckyn);
+alert ("your new total with your discount will be " + calculateTotal(luckyn))
 
 
 /**
@@ -140,25 +142,25 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
-//
-//     function calculateTotal(luckyNumber) {
-//         if (luckyNumber === 0) {
-//             return (tot2)
-//         } else if (luckyNumber === 1) {
-//             return (tot2-(tot2 * .1))
-//         } else if (luckyNumber === 2) {
-//             return (tot2-(tot2 * .25))
-//         } else if (luckyNumber === 3) {
-//             return (tot2-(tot2 *.35))
-//         } else if (luckyNumber === 4) {
-//             return (tot2- (tot2 * .5))
-//         } else if (luckyNumber === 5) {
-//             return (tot2-(tot2))
-//         }}
-//     let tot2 = prompt( "what was your total")
-//     alert ("Your total was "+ "$"+tot2 + " with a lucky number " + luckyNumber);
-//     alert (" Your total was " + "$"+tot2 + " however with your discount; your new total will be " + "$"+calculateTotal(luckyNumber))
+var luckyNumber = Math.floor(Math.random() * 6);
+
+    function calculateTotal(luckyNumber) {
+        if (luckyNumber === 0) {
+            return (tot2)
+        } else if (luckyNumber === 1) {
+            return (tot2-(tot2 * .1))
+        } else if (luckyNumber === 2) {
+            return (tot2-(tot2 * .25))
+        } else if (luckyNumber === 3) {
+            return (tot2-(tot2 *.35))
+        } else if (luckyNumber === 4) {
+            return (tot2- (tot2 * .5))
+        } else if (luckyNumber === 5) {
+            return (tot2-(tot2))
+        }}
+    let tot2 = prompt( "what was your total")
+    alert ("Your total was "+ "$"+tot2 + " with a lucky number " + luckyNumber);
+    alert (" Your total was " + "$"+tot2 + " however with your discount; your new total will be " + "$"+calculateTotal(luckyNumber))
 
 /**
  * TODO:
@@ -180,14 +182,13 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 
 let game= confirm("would you like to pick a number")
-//let numb= prompt("Great")
-
+//function numb(prompt("great what number"))
             switch(game) {
                 case (false):
-                    alert("sorry")
+                    alert("sorry you dont want to play")
                     break;
                 case (true):
-                    let numb = parseFloat(prompt("great"));
+                   let numb = parseFloat(prompt("great what number would you like to pick"));
                     if (!numb || isNaN(numb)) {
                         alert("that is not a number")
                         break;
@@ -204,8 +205,34 @@ let game= confirm("would you like to pick a number")
                         alert("your number is negative")
                         break;
                     }
-
             }
+// this is how instructor did it!!!
+
+    function numberGame(){
+    let userVal = parsefloat(prompt("give me a number!"));
+    if (isNaN(userVal)){
+        alert("thats not a number")
+    }else{
+        alert("hey, did you know that" + userVal + "is an "+evenOrOdd(userVal) + "number")
+        alert(" hey," + userVal + "plus 100 is " + plus100(userVal))
+
+    }
+    }
+
+    function plus100(num){
+    return num+100
+    }
+
+    function evenOrOdd(num){
+    if (num===0){
+        return "zero"}
+    else if(num % 2===0){
+        return "even";
+    }else{
+        return "odd";
+    }
+    }
+
 
 
             }())
