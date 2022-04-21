@@ -62,19 +62,19 @@ function analyzedColor(randomColor) {
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-// function analyzedColor(randomColor){
-//     switch(randomColor) {
-//         case "red":
-//             return "red is a good color";
-//         case "blue":
-//             return"I like the color blue";
-//         default:
-//             return (randomColor + " is not a good color");
-//         break;
-//     }
-// }
-//
-// console.log(analyzedColor(randomColor))
+function analyzedColor(randomColor){
+    switch(randomColor) {
+        case "red":
+            return "red is a good color";
+        case "blue":
+            return"I like the color blue";
+        default:
+            return (randomColor + " is not a good color");
+        break;
+    }
+}
+
+console.log(analyzedColor(randomColor))
 
 
 /**
@@ -111,26 +111,27 @@ let usercolor = prompt( "what is your favorite color" ).toLowerCase().trim();
  * return value.
  */
 
-let luckyn =Math.floor((Math.random()*6))
-    console.log (luckyn)
-function calculateTotal(luckyn) {
-    if (luckyn === 0) {
-        return (tot)
-    } else if (luckyn === 1) {
-        return (tot-(tot * .1))
-    } else if (luckyn === 2) {
-        return (tot-(tot * .25))
-    } else if (luckyn === 3) {
-        return (tot-(tot *.35))
-    } else if (luckyn === 4) {
-        return (tot- (tot * .5))
-    } else if (luckyn === 5) {
-        return (tot-(tot))
-    } else
-    {return (total)}}
-let tot = prompt( "what is your total")
-    alert (" your lucky number is " + luckyn);
-alert ("your new total with your discount will be " + calculateTotal(luckyn))
+// let luckyn =Math.floor((Math.random()*6))
+//     console.log (luckyn)
+// function calculateTotal(luckyn)
+// {
+//     if (luckyn === 0) {
+//         return (tot)
+//     } else if (luckyn === 1) {
+//         return (tot-(tot * .1))
+//     } else if (luckyn === 2) {
+//         return (tot-(tot * .25))
+//     } else if (luckyn === 3) {
+//         return (tot-(tot *.35))
+//     } else if (luckyn === 4) {
+//         return (tot- (tot * .5))
+//     } else if (luckyn === 5) {
+//         return (tot-(tot))
+//     } else
+//     {return (total)}}
+// let tot = prompt( "what is your total")
+//     alert (" your lucky number is " + luckyn);
+// alert ("your new total with your discount will be " + calculateTotal(luckyn))
 
 
 /**
@@ -205,33 +206,35 @@ let game= confirm("would you like to pick a number")
                         alert("your number is negative")
                         break;
                     }
-            }
+           }
 // this is how instructor did it!!!
 
-    function numberGame(){
-    let userVal = parsefloat(prompt("give me a number!"));
-    if (isNaN(userVal)){
-        alert("thats not a number")
-    }else{
-        alert("hey, did you know that" + userVal + "is an "+evenOrOdd(userVal) + "number")
-        alert(" hey," + userVal + "plus 100 is " + plus100(userVal))
+    // function numberGame(){
+    // let userVal = parsefloat(prompt("give me a number!"));
+    // if (isNaN(userVal)){
+    //     alert("thats not a number")
+    // }else{
+    //     alert("hey, did you know that" + userVal + "is an "+evenOrOdd(userVal) + "number")
+    //     alert(" hey," + userVal + "plus 100 is " + plus100(userVal))
+    //
+    // }
+    // }
+    //
+    // function plus100(num){
+    // return num+100
+    // }
+    //
+    // function evenOrOdd(num){
+    // if (num===0){
+    //     return "zero"}
+    // else if(num % 2===0){
+    //     return "even";
+    // }else{
+    //     return "odd";
+    //  }
+    // }
+    //
 
-    }
-    }
-
-    function plus100(num){
-    return num+100
-    }
-
-    function evenOrOdd(num){
-    if (num===0){
-        return "zero"}
-    else if(num % 2===0){
-        return "even";
-    }else{
-        return "odd";
-    }
-    }
 
 
 
