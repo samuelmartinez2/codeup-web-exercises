@@ -1,18 +1,18 @@
 "use strict";
 (function() {
-let Num = prompt("pick an odd number from 1-50 ")
-function pickNumber(Nu)
-    {
-    for (let Nu = 1; Nu<10; Nu++){
-        if (Nu == Num){ alert("we wont do that number")
-            continue;
-        }
-        console.log(Nu)
-    }
-}
-
-pickNumber()
-
+// let Num = prompt("pick an odd number from 1-50 ")
+// function pickNumber(Nu)
+//     {
+//     for (let Num = 1; Num<10; Num++){
+//         if (Num % 2 == 1){ alert("that is an odd number")
+//             continue;
+//         }
+//         console.log(Num)
+//     }
+// }
+//
+// pickNumber()
+//
 
 
 

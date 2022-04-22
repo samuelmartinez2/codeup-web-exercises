@@ -23,20 +23,25 @@
 // showRandomNumbers()
 //
 //
-//     function showmeString()
-//     {
-//         for (let i = 1; i <= 10; i++)
-//         {
-//             for(let j = 1; j <= i; j++)
-//             {
-//                 console.log(i);
-//             }
-//         }
-//     }
+    function showmeString()
+    {
+        for (let i = 0; i < 10; i++)
+        {
+            let string= "";
+            for(let j = 0; j < i; j++)
+            {
+                string +=i
+            }
+                console.log(string);
+            }
+        }
+
+        showmeString()
 //
-//
-// showmeString()
-//
+    //
+    //
+
+
 // function minusFive() {
 //     for (let i = 100; i >=5; i-=5){
 //         console.log(i)
