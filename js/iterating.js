@@ -78,4 +78,5 @@ function last(names) {
     console.log(last(names));
 
 
+//
 })();
