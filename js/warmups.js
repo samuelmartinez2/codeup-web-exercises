@@ -2,7 +2,7 @@
 console.log("Yay I completed my warm up!")
 
 function fizBuz(){
-    for(var i = 1; i <= 20; i++) {
+    for(let i = 1; i <= 20; i++) {
         if ((i % 3 == 0) && (i % 5 == 0) ) {
             console.log("Fizz Buzz");
         }
@@ -22,7 +22,7 @@ fizBuz()
 
 //
 // function fizBuz(){
-//     for(var i = 1; i <= 20; i++) {
+//     for(let i = 1; i <= 20; i++) {
 //
 //         if (i % 3 == 0) {
 //             console.log("Fizz")
@@ -40,3 +40,18 @@ fizBuz()
 //     }
 //
 // fizBuz()
+
+for (let x = 1; x <= 20; x++ ){
+    var output = "";
+
+    if (x % 3 == 0) {
+        output += "fizz";
+    }
+    if (x % 5 == 0) {
+        output += "Buzz"
+    }
+    if (output ==""){
+        output = x;
+    }
+}
+console.log(output);
