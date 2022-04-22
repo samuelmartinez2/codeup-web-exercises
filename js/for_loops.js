@@ -37,9 +37,15 @@ showRandomNumbers()
 
 showmeString()
 
+function minusFive(input) {
+    for (let i = 100; i >=5; i-=5){
+        console.log(i)
 
+    }
 
+}
 
+minusFive()
 
 
 
