@@ -23,23 +23,19 @@ function showRandomNumbers(randomN){
 showRandomNumbers()
 
 
-    function showmeString(numb){
-    for (let i= 0; i < 10; i++) {
-        console.log(numb);
-        break;
-    }
-    for (let i= 0; i < 10; i++) {
-        console.log(numb + i + (numb + i).toString());
-        break;
-    }
-for (let i=0; i <10; i++) {
-    console.log(numb + i +(numb +i).toString()+ (numb + i).toString())
-}
+    function showmeString(input)
+    {
+        for (let i = 1; i <= 10; i++)
+        {
+            for(let j = 1; j <= i; j++)
+            {
+                console.log(i);
+            }
+        }
     }
 
-showmeString(1)
 
-
+showmeString()
 
 
 
