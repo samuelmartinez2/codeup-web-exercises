@@ -8,7 +8,9 @@
      */
     let names = ["Bob", "Carlos", "Joe", "Jose"];
 
+    // practice with other string
     let numbers = ["10", "20", "30", "40"]
+
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
@@ -38,6 +40,7 @@
         console.log(names[i]);
     }
 
+    // did the same thing with a numbers string
     for (let i = 0; i < numbers.length; i++) {
         console.log(numbers[i]);
     }
@@ -99,6 +102,8 @@ names.forEach(function(name){
        return names[names.length - 1]
     }
     console.log(last())
+
+
 
 
 
