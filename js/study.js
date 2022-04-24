@@ -31,7 +31,7 @@
     function translate(nombre){
         return "hello " + nombre;
     }
-
+// this has to be a string to be able to add it
     console.log(translate("bob"));
 
 

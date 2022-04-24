@@ -20,7 +20,7 @@
             break;
         }
     }
-
+//
 
     for(let j = 1; j <= 50; j += 2) {
         if (j == userNum) {

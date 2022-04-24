@@ -24,6 +24,7 @@
     while (0 < randomNumb50to100);{
         console.log( "")
     }
+//
 
 
 
