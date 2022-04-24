@@ -41,13 +41,13 @@
     //
     //diferent method
 
-    function numberPyramid(){
-        for (let z =1, z< 10; z++){
-            console.log(z.toString().repeat(z))
-        }
-    }
-    numberPyramid()
-
+    // function numberPyramid(){
+    //     for (let z =1, z< 10; z++){
+    //         console.log(z.toString().repeat(z))
+    //     }
+    // }
+    // numberPyramid()
+    //
 
     //
 
