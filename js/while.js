@@ -16,13 +16,13 @@
         //console.log("numbers are: " + randomNumb50to100 + ", " + custumerbuy);
         if (custumerbuy > randomNumb50to100)
         {
-            console.log("dont have that many");
+            console.log("cant sell you " + custumerbuy+ " we don't have that many");
         } else {
             randomNumb50to100 -= custumerbuy;
             console.log("customer ordered "+ custumerbuy + ".  we now have " + randomNumb50to100 + " left")
         }}
     while (0 < randomNumb50to100);{
-        console.log( "")
+        console.log( " cool, we sold all our cones")
     }
 //
 
