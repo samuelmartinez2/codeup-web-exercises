@@ -19,10 +19,17 @@ console.log (planetsArray);
      * results. Why might this be useful?
      */
 
-     let planetsWbr = "Mercury<br>Venus<br>Earth<br>Mars<br>Jupiter<br>Saturn<br>Uranus<br>Neptune";
+    let planetsWbr = planetsArray.join('<br>')
+
+    // let planetsWbr = "Mercury<br>Venus<br>Earth<br>Mars<br>Jupiter<br>Saturn<br>Uranus<br>Neptune";
 
 
     console.log(planetsWbr)
+
+//function list (<li>planetsWbr</li>) {
+
+//}console.log(list())
+
      /** BONUS:
      * Create another string that would display your planets in an undordered
      * list. You will need an opening AND closing <ul> tags around the entire
