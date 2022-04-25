@@ -26,6 +26,9 @@ console.log (planetsArray);
 
     console.log(planetsWbr)
 
+    //this is how you add it to the html document
+    document.body.innerHTML += planetsWbr;
+
 //function list (<li>planetsWbr</li>) {
 
 //}console.log(list())
@@ -35,5 +38,12 @@ console.log (planetsArray);
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
+
+     // this is how it is supposed to look like.
+
+    let planetsUL = "<ul><li>" + planetsArray.join("</li><li>") + "</li></ul>";
+
+    document.body.innerHTML += planetsUL;
+
 
 })();
