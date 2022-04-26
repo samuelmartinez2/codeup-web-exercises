@@ -42,8 +42,10 @@ function sayHello(input) {
     return "Hello from " + input
     }
     //let sayHello = "hello from" + " "+ person.firstName+ " "+ person.lastName
-
-
+//instructor did this
+//     person.sayhello = function({
+//         return
+   // }
     console.log(sayHello(person.firstName+ " "+ person.lastName))
 
     /** TODO:
@@ -87,13 +89,13 @@ function sayHello(input) {
      */
 
     let books =[
-     {
-        title: "tile 1",
-        author: {
-            firstName: "Fname1",
-            lastName: "Lname1"
+        {
+            title: "tile 1",
+            author: {
+                firstName: "Fname1",
+                lastName: "Lname1"
         }
-    },
+        },
         {
             title: "title 2",
             author: {
@@ -186,16 +188,51 @@ let i=1
      */
 
 
-    // function createBook(title, authorN) {
-    //    return("Title: "+ title + "\n" + "Author: " + authorN )
+    function createBook(title, authorN) {
+       return("Title: "+ title + "\n" + "Author: " + authorN )
+    }
+    console.log(createBook("Litle pigs", "Bob Dilan"));
+
+    //instructor did this
+    // function createBook(title, author){
+    //     let authorArr = author.split("");
+    //     if (authorArr.length < 2) {
+    //         return {
+    //             title,
+    //             author: {
+    //                 firstName: ""
+    //                 lastName: authorArr[0]
+    //             }
+    //         }
+    //         } else {
+    //         return {
+    //         title,
+    //         author: {
+    //             firstName: authorArr[0]
+    //             lastName: authorArr[1]
+    //             }
+    //         }
+    //     }
     // }
-    // console.log(createBook("Litle pigs", "Bob Dilan"));
 
     function showBookInfo(bookobject){
-      return books.title
+      return books.title + books.author.firstName
   }
 
-    console.log(showBookInfo(books.title.author.firstName));
+  function showAllBooksInfo(books) {
+      let count = 1;
+      let str = "";
+      for (let book of Books) {
+          str += count + showBookInfo(book)
+      }
+      return str;
+  }
+
+  for (let book of library) {
+      console.log(book);
+  }
+console.log(showAllBooksInfo(books))
+   // console.log(showBookInfo(books.title.author.firstName));
 
 
 })();
