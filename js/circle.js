@@ -5,12 +5,12 @@
     var circle = {
         radius: 3,
 
-        getArea: function () {
+        getArea: function (Math.PI, radius) {
             // TODO: complete this method
             // hint: area = pi * radius^2
 
-            return; // TODO: return the proper value
-        },
+            return; getArea // TODO: return the proper value
+        },console.log (getArea())
 
         logInfo: function (doRounding) {
             // TODO: complete this method.
