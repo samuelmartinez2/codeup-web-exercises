@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 (function(){
 
 
@@ -15,10 +15,19 @@ function allFirstLetters([array]) {
 }
 
 const testArrayStrings= ["dog", "cat","frog","bat"];
-console.log((AllFirstLetters(testArrayStrings)))
+console.log((allFirstLetters(testArrayStrings)))
 
 
+//  warm up #2
+//     write a function that takes in a string and return that string in alphabetical order.
 
-
-
+    function alphabeticalOrder(string) {
+    let stringArray= string.split('');
+    console.log(stringArray)
+        let sortedArray = stringArray.sort()
+        console.log(sortedArray);
+    return string.split('').sort().join('')
+    }
+alphabeticalOrder
+console.log(alphabeticalOrder("codeup"))
 })()
