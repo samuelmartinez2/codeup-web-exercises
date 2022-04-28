@@ -3,4 +3,57 @@
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
+    text-align: center;
+
+}
+h3.fancy-header {
+    color: green;
+    text-decoration: underline;
+    text-align: left;
+}
+
+body {
+    background-color: rgba(255, 255, 0, 0.5);
+    background-image: url(../img/CodeupFullColorChevronYT.jpeg);
+    background-attachment:  fixed;
+    background-position: center;
+
+}
+ol {
+    list-style: upper-alpha;
+}
+ul {
+    list-style: square;
+}
+body {
+    font-family: cursive;
+}
+tr {
+    color: green;
+}
+td {
+    color: red;
+    font-size: 30px
+}
+th {
+    color: darkblue;
+    padding: 20px;
+    font-size: 30px;
+}
+.footer-link:hover {
+    background-color: black;
+    color: red;
+}
+
+.footer-link:visited {
+    color: blue;
+}
+
+.footer-link {
+    color: green;
+}
+
+.footer-link:active {
+    background-color: black;
+    color: white;
 }
