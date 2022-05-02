@@ -31,3 +31,31 @@ console.log((allFirstLetters(testArrayStrings)))
 alphabeticalOrder
 console.log(alphabeticalOrder("codeup"))
 })()
+
+// warm up #3
+// Write a function that takes in an array numbers and returns the sum of all elements.
+
+function sumOfElements(arr) {
+    let bucket = 0
+    for (let el of arr) {
+        bucket += el;
+    }
+    return bucket;
+}
+//same as above
+function sumOfElements(arr) {
+    let bucket = 0
+    for (let i =0; i < arrOfNums.lenght; i++) {
+        bucket += arrOfNums[i];
+    }
+    return bucket;
+}
+
+console.log(sumOfElements([1, 2, 3, 4, 5]));
+console.log(sumOfElements([23, 34, 12, 23]));
+//this is wha i was trying
+// sumOFElements([1,2,3,4,5]){
+//     let numberArray=[1,2,3,4,5];
+//     let numberString =  numberArray.join(',')
+//     console.log(numberString)
+// }
