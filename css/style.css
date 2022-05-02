@@ -4,20 +4,33 @@
     color: purple; /* single line comment */
     text-decoration: underline;
     text-align: center;
+    font-size: 50px
 
 }
 h3.fancy-header {
     color: green;
     text-decoration: underline;
     text-align: left;
+    font-size: 30px
 }
+h2.fancy-header {
+    color: black;
+    font-size: 40px;
+    text-align: left;
+}
+body{
 
-body {
-    background-color: rgba(255, 255, 0, 0.5);
+    font-family: cursive;
+   background-color: rgba(255, 255, 0, 0.5);
     background-image: url(../img/CodeupFullColorChevronYT.jpeg);
+
     background-attachment:  fixed;
     background-position: center;
 
+}
+p,li {
+    font-weight: bold;
+    font-size: 20px;
 }
 ol {
     list-style: upper-alpha;
@@ -25,20 +38,22 @@ ol {
 ul {
     list-style: square;
 }
-body {
-    font-family: cursive;
-}
+
 tr {
-    color: green;
+    color: #e8270e;
+    font-size: 30px;
+    text-align: left;
 }
 td {
-    color: red;
-    font-size: 30px
+    //color: red;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgba(19, 197, 89, 0.2);
 }
 th {
     color: darkblue;
-    padding: 20px;
-    font-size: 30px;
+    padding: 0px 50px;
+    background-color: rgba(26, 18, 16, 0.2);
 }
 .footer-link:hover {
     background-color: black;
@@ -56,4 +71,8 @@ th {
 .footer-link:active {
     background-color: black;
     color: white;
+}
+hr {
+    border-bottom-width: 20px;
+    border-color: rgba(21, 13, 10, 0.71);
 }
