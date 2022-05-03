@@ -125,9 +125,9 @@ a {
 }
 .media {
     width: 100%;
-    background: var(--light-bg);
+    background-color: var(--light-bg);
     padding: .5em;
-    border-bottom-color: 1px var(--separator-color);
+    border-bottom: 1px solid var(--separator-color);
     overflow: auto;
 }
 .media-image {
