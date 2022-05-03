@@ -1,3 +1,18 @@
+/*//this is how to do the bonus, you need to assign variables to assign different colors to their respective section.
+they have to be (var)and not (let),//*/
+
+
+/*: root{*/
+/*    --main-bg-info: #ccdeff*/
+/*    --main-text-info: #4a45a1*!*/
+/*      --main-bg-success: #CFF3DA*/
+/*      --main-text-success: #166B35;*/
+/*    --main-bg-warning: #FCFBC9*/
+/*    --main-text-warning: #AB9D4E*!*/
+/*      --main-bg-error: #CFF3DA*/
+/*      --main-text-error: #166B35;*/
+/*!*}*!*/
+
 body,html {
     height: 100%;
     width: 100%;
