@@ -112,7 +112,7 @@ a {
 
 .who-to-follow {
     float: right;
-    width: calc(25% - 8px);
+    width: calc(25% - 2em);
     margin: 0 .5em 0 .5em;
 }
 .profile-details {
