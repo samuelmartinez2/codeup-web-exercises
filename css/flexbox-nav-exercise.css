@@ -6,7 +6,7 @@ body {
 
 }
 nav {
-    background: gray;
+    background: #C1C1C1;
 
 }
 .logo {
@@ -43,7 +43,7 @@ nav a {
 
 }
 nav a:hover {
-    background: white;
+    /*background: white;*/
     color: blue;
 }
 /*nav li:nth-of-type(5) {*/
