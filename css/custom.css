@@ -1,0 +1,48 @@
+* {box-sizing: border-box}
+
+/*@media screen and (max-width:800px) {*/
+
+   a {
+       display: flex;
+
+
+   }
+    .container {
+        margin: 0;
+    }
+
+    .jumbotron {
+        display: flex;
+        height: 346px;
+        background-size: cover;
+        background-image: url("../img/pizza.png");
+
+    }
+
+    .text {
+        background-color: rgba(221, 221, 221, 0.6);
+        align-self: center;
+        text-align: center;
+        width: 100%;
+        font-size: 40px;
+    }
+    .signup {
+        display: flex;
+        align-items: center;
+    }
+    .image {
+
+        height: 25px;
+        width: 25px;
+
+    }
+    .btn {
+width: 100%;
+        color: #3D84FE;
+        border-color:#3D84FE ;
+    }
+
+
+
+
+/*}*/
