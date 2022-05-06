@@ -13,21 +13,27 @@ nav {
     padding-bottom: .2em;
     padding-top: .2em;
     font-size: 3em;
-    margin: auto;
+    margin:  auto;
     font-family: 'Work Sans', sans-serif;
+/*bonus
+position: relative;
+left: -1.25em;
 
+
+*/
 
 }
 .container {
     display: flex;
-   align-items: center ;
+   align-items: center;
 }
 ul {
     list-style: none;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+/*margin: O makes it go all the way up*/
 
-/*justify-content: space-between ;*/
 
 }
 
@@ -38,7 +44,6 @@ nav a {
     padding: 1em;
     display: inline-block;
     font-size: .7em;
-
 
 
 }
