@@ -42,69 +42,188 @@
 
 <!--    // this is where my dropdown option start//-->
 
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><span class="badge bg-secondary">1</span>size and crust</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"><span class="badge bg-secondary">2</span>cheese and Sauce</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false"><span class="badge bg-secondary">2</span>Topping</button>
-        </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Choose size and crust
-
-<!--            this is the first cards for size and crust-->
-
-            <div class="card">
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><span class="badge bg-secondary">1</span>Size and crust</button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><span class="badge bg-secondary">2</span>Cheese and Sauce</button>
+            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false"><span class="badge bg-secondary">3</span>Toppings</button>
+        </div>
+    </nav>
+<!--    cards start here-->
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<!--            first card in first tab-->
+            <div class="card w-75">
+            <div class="card-body">
+                <h5 class="card-title">choose size and crust</h5>
+                <p class="card-text">
+                <div class="card w-75">
                 <div class="card-body">
-                    Hand Toss
+                    <h5 class="card-title">Hand Tossed</h5>
+                    <p class="card-text">
+                    <ul class="list-group">
+                        <li class="list-group-item"> garlic seasoned crust with a rich, buttery taste.</li>
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                            Small (10")
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                            Medium (12")
+                        </li>
+
+                    </ul></p>
+
                 </div>
-                <h5>Garlic seasoned crust with a rich, buttery taste</h5>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                        Small (10")
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                        Medium (12")
-                    </li>
-                </ul>
+                <div class="card w-75">
+                    <div class="card-body">
+                        <h5 class="card-title">Crispy Thin</h5>
+                        <p class="card-text">
+                        <ul class="list-group">
+                            <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Medium(12")
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Large(14")
+                            </li>
+                        </ul>
+                        </p>
+
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                Thin Crust
+                </p>
+                <a href="#" class="btn btn-primary me-md-2 d-grid gap-2 d-md-flex justify-content-md-end" type="button">Next Step</a>
             </div>
-            <h5>Thin enough for optimum crispy to crunchy ration.</h5>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="Crispy Thin">
-                    Medium (12")
-                </li>
-                <li class="list-group-item">
-                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="Crispy Thin">
-                    Large (14")
-                </li>
-            </ul>
         </div>
 
         </div>
 
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">.helloakdkash <div class="card-body">
+<!--        second tab cards begin here-->
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div class="card w-75">
+                <div class="card-body">
+                    <h5 class="card-title">choose Cheese and Sauce</h5>
+                    <p class="card-text">
+                    <div class="card w-75">
+                        <div class="card-body">
+                            <h5 class="card-title">Cheese</h5>
+                            <p class="card-text">
+                            <ul class="list-group">
+                                <li class="list-group-item"> How Much?</li>
+                                <li class="list-group-item">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                                        <select class="form-select" id="inputGroupSelect01">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Light</option>
+                                            <option value="2">Normal</option>
+                                            <option value="3">Extra</option>
+                                            <option value="3">Double</option>
+                                        </select>
+                                    </div>
+                                </li>
+
+                            </ul></p>
+                        </div>
+                        <div class="card w-75">
+                            <div class="card-body">
+                                <h5 class="card-title">Sauce</h5>
+                                <p class="card-text">
+                                <ul class="list-group">
+                                    <li class="list-group-item">What type?</li>
+                                    <li class="list-group-item">
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text" for="inputGroupSelect01"></label>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Choose...</option>
+                                                <option value="1">Tomato</option>
+                                                <option value="2">Marinara</option>
+                                                <option value="3">BBQ</option>
+                                                <option value="3">Alfredo</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                <li class="list-group-item">how much?</li>
+                                <li class="list-group-item">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="inputGroupSelect01"></label>
+                                        <select class="form-select" id="inputGroupSelect01">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Light</option>
+                                            <option value="2">Normal</option>
+                                            <option value="3">Extra</option>
+                                        </select>
+                                    </div>
+                                </li>
+
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    </p>
+                    <a href="#" class="btn btn-primary me-md-2 d-grid gap-2 d-md-flex justify-content-md-end" type="button">Next Step</a>
+                </div>
+            </div>
 
         </div>
 
-<!--this is where the next tab starts "Cheese and Sauce"-->
+<!--        tird tab cards begin here-->
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            <div class="card w-75">
+                <div class="card-body">
+                    <h5 class="card-title">choose size and crust</h5>
+                    <p class="card-text">
+                    <div class="card w-75">
+                        <div class="card-body">
+                            <h5 class="card-title">Hand Tossed</h5>
+                            <p class="card-text">
+                            <ul class="list-group">
+                                <li class="list-group-item"> garlic seasoned crust with a rich, buttery taste.</li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    Small (10")
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    Medium (12")
+                                </li>
 
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-            <div class="card-body">
+                            </ul></p>
 
+                        </div>
+                        <div class="card w-75">
+                            <div class="card-body">
+                                <h5 class="card-title">Crispy Thin</h5>
+                                <p class="card-text">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                        Medium(12")
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                        Large(14")
+                                    </li>
+                                </ul>
+                                </p>
 
-
+                            </div>
+                        </div>
+                    </div>
+                    </p>
+                    <a href="#" class="btn btn-primary me-md-2 d-grid gap-2 d-md-flex justify-content-md-end" type="button">Next Step</a>
+                </div>
+            </div>
         </div>
     </div>
+
+
 
 
 
