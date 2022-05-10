@@ -5,7 +5,7 @@
     <title>order-pizza.html</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/custom.css">
-
+    <script src="https://kit.fontawesome.com/9642606795.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,19 +24,21 @@
                 </li>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Zip Code" aria-label="Search">
-                    <button class="btn btn-outline-primary btn1 " type="submit">Search store near you!</button>
+                    <button class="btn btn-outline-primary w-100 " type="submit">Search stores near you!</button>
                 </form>
             </ul>
             <span class="navbar-text">
-               <h4 class="signup"><img  class= image src="img/member icon.png"> <a class="nav-link" href="#">sign up!!</a></h4>
+<!--                need to fix this//need to add correct icon-->
+               <h4 class="signup"><img  class= image src="img/member icon.png"> <a class="nav-link" href="#">sign up!</a></h4>
       </span>
         </div>
     </div>
 </nav>
 
 <div class="container">
-    <main class="jumbotron">
-        <div class="text">Welcome to Pizza World!</div>
+
+    <main class="jumbotron d-none d-md-flex">
+        <div class="text bg-light p-2 text-dark bg-opacity-75 flex-fill text-center w-100 "><h2>Welcome to Pizza World!</h2></div>
 
     </main>
     <h2>Build your own pizza ! <span class="badge bg-secondary"></span></h2>
@@ -46,8 +48,8 @@
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><span class="badge rounded-pill bg-secondary">1</span> Size and crust</button>
-            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><span class="badge rounded-pill bg-secondary">2</span>  Cheese and Sauce</button>
-            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false"><span class="badge rounded-pill bg-secondary">3</span>Toppings</button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><span class="badge rounded-pill bg-secondary">2</span> Cheese and Sauce</button>
+            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false"><span class="badge rounded-pill bg-secondary">3</span> Toppings</button>
         </div>
     </nav>
 <!--    cards start here-->
@@ -240,7 +242,7 @@
                     </div>
                     </p>
                     <div class="card-footer d-flex card-footer text-light justify-content-end ">
-                        <a href="#" type="button" class="btn btn-primary">Checkout<i class="bi bi-cart2"></i> </a>
+                        <a href="#" type="button" class="btn btn-primary">Checkout<i class="fa-solid fa-cart-shopping"></i>  </a>
                     </div>
                 </div>
             </div>
