@@ -163,3 +163,26 @@ function tallestObject(arr) {
 }
 
 console.log(tallestObject(hamsters));
+
+//Write a function that will accept an array of objects and return the object from the array that is the most colorful.
+
+function mostcolor(hamsters) {
+    let colorf = {fur: []};
+    for (let hamster of hamsters) {
+        if (hamster.fur.length > colorf.fur.length) {
+            colorf = hamster;
+        }
+    }
+    return colorf;
+}
+
+console.log(mostcolor(hamsters));
+
+function mostcolor(hamsters){
+    let colorf = hamsters[0];
+    for (let x=1; x<  hamster.length; x++) {
+        if (hamster[x].fur.length > colorf.fur.length) {
+            colorf = hamster[x];
+        }
+    }
+    return colorf;
