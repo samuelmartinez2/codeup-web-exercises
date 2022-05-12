@@ -6,10 +6,10 @@
     //Write a function that takes in an array of strings and returns a string of the first letter of each element concatenated together:
     // ex. allFirstLetters(["dog","cat","frog","bat"]) returns--> "dcfb";
 
-function allFirstLetters([array]) {
+function allFirstLetters(arrayOfstr) {
     let bucket = "";
-    for (let el of array) {
-        bucket += el[0];
+    for (let el of arrayOfstr) {
+        bucket += el.substring(0,1);
     }
     return bucket;
 }
@@ -28,7 +28,6 @@ console.log((allFirstLetters(testArrayStrings)))
         console.log(sortedArray);
     return string.split('').sort().join('')
     }
-alphabeticalOrder
 console.log(alphabeticalOrder("codeup"))
 })()
 
@@ -178,11 +177,49 @@ function mostcolor(hamsters) {
 
 console.log(mostcolor(hamsters));
 
-function mostcolor(hamsters){
+function mostcolor(hamsters) {
     let colorf = hamsters[0];
-    for (let x=1; x<  hamster.length; x++) {
-        if (hamster[x].fur.length > colorf.fur.length) {
-            colorf = hamster[x];
+    for (let x = 1; x < hamsters.length; x++) {
+        if (hamsters[x].fur.length > colorf.fur.length) {
+            colorf = hamsters[x];
         }
     }
     return colorf;
+
+}
+    // write a function that wll accept a string. should return an object with the following properties; string, size, containsLetterFromRSTLINE, and is one word.
+
+    function makeObjectString(str) {
+    const obj ={};
+    obj.string = str;
+    obj.size = str.length;
+    obj.isOneWord = str.indexOf(" ") < 0;
+    let lc= str.toLowerCase();
+    if (lc.includes("r") || lc.includes("s") || lc.includes("t") || lc.includes ("l") || lc.includes("i") || lc.includes("n") || lc.includes("e")) {
+        obj.containsLettersFromRSTLINE = true;
+    }else {
+        obj.containsLettersFromRSTLINE = false;
+    }
+    return  obj;
+    }
+    console.log(makeObjectString("tacocat"));
+
+// let obj1= "make";
+// let obj2= "model";
+//
+// function makeCar(str1,str2 )
+// {
+// return (obj1 + str1 + obj2 + str2);
+// }
+//
+// console.log(makeCar("VW", "bettle"));
+
+function makeCar(make,model) {
+    let carObj ={}
+    carObj.make = make;
+    carObj.model = model
+    return carObj
+
+}
+
+console.log(makeCar("VW", "bettle"));
