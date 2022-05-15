@@ -56,16 +56,16 @@
 
 
 
-        //
-        // for (let i = 0; i < 10; i++) {
-        //     let string= "";
-        //      for(let j = 0; j < i; j++)
-        //      {
-        //         string += i;
-        //     }
-        //         console.log(string);
-        //
-        // }
+
+        for (let i = 0; i < 10; i++) {
+            let string= "";
+             for(let j =0; j < i; j++)
+             {
+                string += i;
+            }
+                console.log(string);
+
+        }
 // I still dont understand the logic on this!!!!!!!
     function numberPyramid()
     {

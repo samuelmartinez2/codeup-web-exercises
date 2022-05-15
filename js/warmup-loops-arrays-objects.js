@@ -34,21 +34,21 @@ console.log(alphabeticalOrder("codeup"))
 // warm up #3
 // Write a function that takes in an array numbers and returns the sum of all elements.
 
-function sumOfElements(arr) {
-    let bucket = 0
-    for (let el of arr) {
-        bucket += el;
-    }
-    return bucket;
-}
-//same as above
 // function sumOfElements(arr) {
 //     let bucket = 0
-//     for (let i =0; i < arrOfNums.lenght; i++) {
-//         bucket += arrOfNums[i];
+//     for (let el of arr) {
+//         bucket += el;
 //     }
 //     return bucket;
 // }
+//same as above
+function sumOfElements(arrOfNums) {
+    let bucket = 0
+    for (let i =0; i < arrOfNums.length; i++) {
+        bucket += arrOfNums[i]
+    }
+    return bucket;
+}
 
 console.log(sumOfElements([1, 2, 3, 4, 5]));
 console.log(sumOfElements([23, 34, 12, 23]));
@@ -177,7 +177,7 @@ function mostcolor(hamsters) {
 
 console.log(mostcolor(hamsters));
 
-function mostcolor(hamsters) {
+function mostcolor1(hamsters) {
     let colorf = hamsters[0];
     for (let x = 1; x < hamsters.length; x++) {
         if (hamsters[x].fur.length > colorf.fur.length) {
@@ -187,6 +187,9 @@ function mostcolor(hamsters) {
     return colorf;
 
 }
+
+console.log(mostcolor1(hamsters))
+
     // write a function that wll accept a string. should return an object with the following properties; string, size, containsLetterFromRSTLINE, and is one word.
 
     function makeObjectString(str) {
@@ -214,10 +217,10 @@ function mostcolor(hamsters) {
 //
 // console.log(makeCar("VW", "bettle"));
 
-function makeCar(make,model) {
-    let carObj ={}
-    carObj.make = make;
-    carObj.model = model
+function makeCar(str,str2) {
+    const carObj ={};
+    carObj.make = str;
+    carObj.model = str2;
     return carObj
 
 }
