@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -25,6 +27,17 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="btn-1"> java is cool</button>
+<br>
+<br>
+<button id="btn-2"> hello again</button>
+<br>
+<br>
+<button id="btn-3">grey and blue items</button>
+<br>
+<br>
+<button id="btn-4">mission accomplished</button>
+
 <script>
     (function() {
         "use strict";
@@ -32,30 +45,42 @@
         let mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool"
+        // mainHeader.innerHTML = "JavaScript is Cool"
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "#2e70c7"
+        // subHeader.style.color = "#2e70c7"
 
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName("li");
 
         // TODO: Set text color on every other list item to grey
 
-        listItems[0].style.color = "rgba(221,221,221,0.37)";
-        listItems[2].style.color = "#dddddd5f";
-        listItems[4].style.color = "#dddddd88";
+
+        // for (let i = 0; i < listItems.length; i++) {
+        //     if (i % 2 == 0 ) {
+        //         listItems[i].style.color = "grey";
+        //     }
+        // }
+
+        // listItems[0].style.color = "rgba(221,221,221,0.37)";
+        // listItems[2].style.color = "#dddddd5f";
+        // listItems[4].style.color = "#dddddd88";
 
         // TODO: Set text color of li with dbid = 1 to blue
+        // this is how to do this one
 
+// for (let i = 0; i < listItems.length; i++) {
+//     if (listItems[i].getAttribute("data-dbid")=== "1") {
+//         listItems[i].style.color = "blue";
+//     }
+// }
 
-
-        listItems[0].setAttribute("class", "blue");
-        let dbid2 = document.getElementsByClassName("blue");
-        dbid2[0].style.color = "#2e70c7";
+        // listItems[0].setAttribute("class", "blue");
+        // let dbid2 = document.getElementsByClassName("blue");
+        // dbid2[0].style.color = "#2e70c7";
 
 
         // why didn't this work?
@@ -63,7 +88,7 @@
         //     var dbId = listItems[i].getAttribute("data-dbid");
         //     console.log(dbId);
         // if (dbId == 1); {
-        //     dbId[0].style.color = "#2e70c7";
+        //     listItems[0].style.color = "#2e70c7";
         // }
         // }
 
@@ -71,15 +96,43 @@
 
         // dbId[1].style.color = "rgb(46,112,199)";
 
-        listItems[0].style.color = "rgb(46,112,199)";
+        // listItems[0].style.color = "rgb(46,112,199)";
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
 
-        subParagraphs[0].innerText = "mission accomplished"
+        // subParagraphs[0].innerText = "mission accomplished"
 
+
+     document.getElementById("btn-1").addEventListener("click", function() {
+            console.log("clicked");
+         mainHeader.innerHTML = "JavaScript is Cool";
+        })
+
+        document.getElementById("btn-2").addEventListener("click", function() {
+            console.log("clicked");
+            document.getElementById("sub-header").style.color = "#2e70c7"
+        })
+
+        document.getElementById("btn-3").addEventListener("click", function() {
+            console.log("clicked");
+            document.getElementsByTagName("li"); {
+            for (let i = 0; i < listItems.length; i++) {
+                if (i % 2 == 0 ) {
+                    listItems[i].style.color = "grey";
+                }
+           listItems[0].style.color = "blue"
+            }}
+        })
+
+        document.querySelector("#btn-4").addEventListener("click", function() {
+            console.log("clicked");
+            document.getElementsByClassName("sub-paragraph")[0].innerText = "mission accomplished";
+        })
+
+//with QuerySelector you can specify a specific selector. ie .class #id etc.
 
     })();
 </script>
