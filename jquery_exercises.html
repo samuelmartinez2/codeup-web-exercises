@@ -5,8 +5,18 @@
     <title>Title</title>
 </head>
 <body>
+<h1 class="tittle">JQuery Testing Page</h1>
 
+<div class="divtab" id="divid">
+    <p class="parone" id="paroneid">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores consequatur cupiditate doloribus eveniet hic id incidunt iste magni modi, mollitia, nobis optio perspiciatis possimus quaerat reiciendis reprehenderit totam ut.</p>
+    <p class="partwo" id="partwoid">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis corporis dolor dolores facere id illum impedit ipsa labore molestias, mollitia nisi non nostrum omnis porro! Fugit itaque officiis suscipit.</p>
+    <ul class="ulist" id="ulistid">this is a unoreded list</ul>
 
+        <li class="codeup" id="lioneid">list one</li>
+        <li class="codeup" id="litwoid">list two</li>
+        <li class="" id="lithreeid">last three</li>
+
+</div>
 
 
 
@@ -17,6 +27,45 @@
 <script>
     $(function () {
         alert("the DOM has finished loading");
+
+        // let divTab = $('.divtab').html();
+        // alert("this is the div tag")
     });
+
+
+    $(function() {
+        // let divTab = $('#divid').html();
+        // alert(divTab);
+        //
+        // let paraid = $('#paroneid').html();
+        // alert(paraid);
+        //
+        // let litest = $('#lioneid').html();
+        // alert(litest);
+
+        // let liClass = $('.codeup');
+        // liClass.css('border','1px solid red');
+        //
+
+
+        $("li").css('font-size', '20px')
+        $('h1').css('background-color', 'blue')
+        $('p').css('background-color', 'orange')
+        $('li').css('background-color', 'pink')
+        // $('h1,p,li').css('background-color', 'yellow')
+
+        let h1Tag= $('h1').html();
+        alert(h1Tag)
+
+        $('h1').each(function (index. el) {
+            alert($(this).htnl());
+        }
+
+    })
+
+
+
+
 </script>
+
 </html>

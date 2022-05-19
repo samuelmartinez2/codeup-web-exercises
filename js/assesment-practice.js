@@ -60,8 +60,8 @@ const ages = [33,12,20,16,5,54,21,44,61,13,15,45,25,64,32];
     //     console.log(random);
     // })
     //
-    //
-    //
+
+
 
 let canDrink =[];
 for(let i = 0; i < ages.length; i++) {
@@ -71,8 +71,38 @@ for(let i = 0; i < ages.length; i++) {
 }
 console.log(canDrink);
 
+function mostColorful(hamsters) {
+    let mostColors = {fur : []};
+    for (let hamster of hamsters) {
+        if (hamster.fur.length > mostColors.fur.length) {
+            mostColors = hamster;
+        }
+    }
+    return mostColors;
+}
 
 
+function nameAndCategory(companies){
+    let categoRy = {category:[]};
+    for (let categ of companies) {
+        if (categ.category === "auto") {
+            categoRy = categ;
+        }
+    }
+    return categoRy
+    }
+    console.log(nameAndCategory(companies));
+
+
+//     companies.forEach();
+//     if(companies.includes("auto"));
+//     return {
+//         category: "category"
+//         // category: category,
+// }
+
+
+// console.log(nameAndCategory("companies"));
 
 // var count = 0;
 // var max = 5;
@@ -90,7 +120,7 @@ console.log(canDrink);
 //
 
 
-'use strict';
+
 
 var delay = 4000; // delay time in milliseconds
 
