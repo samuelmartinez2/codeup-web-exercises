@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+  <img class="pic" src="img/contra.jpeg" alt="" style="width: 100%">
+
+
+<audio>
+  <source src="audio/01 Title.mp3" type="audio/ogg">
+  <source src="" type="audio/mpeg">
+</audio>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="/js/jquery.js"></script>
+<script>
+  "use strict";
+
+
+  $(document).keyup(function (event){
+    if (event.keyCode === start) {
+      audio1.play();
+    } if (event.keyCode === cheaTer) {
+      alert('cheater');
+      $('body').append('<img src="img/cheater.jpeg" style="width: 100%"/>');
+    }
+    console.log(event.keyCode)
+  })
+
+  // $(document).keyup(function(event){
+  //   console.log(event.keyCode);
+  let audio1 = new Audio('audio/first.mp3')
+  let audio = new Audio('audio/01 Title.mp3');
+  let cheaTer = [8]
+  let start = [49]
+
+  let allowedKeys = {
+      37: 'left', 38: 'up', 39: 'right', 40: 'down', 65:'a', 66:'b', 13:'enter', 8: 'del'
+    };
+  console.log(allowedKeys);
+  let cheatCode = ['up','up','down','down']
+    // ,'left','right','left','right','b','a','enter']
+
+    let codePosition = 0;
+
+    $(document).keydown(function(event){
+      let coDe = allowedKeys[event.keyCode];
+      let requiredCode = cheatCode[codePosition];
+      // console.log(coDe);
+      // console.log(requiredCode);
+      if (coDe == requiredCode) {
+        codePosition++;
+        if (codePosition == cheatCode.length-3) {
+          alert( 'are you cheating?');
+          $('h1').css('background-color', 'red');
+        }
+        if (codePosition == cheatCode.length) {
+          // $('body').css('background-color','yellow');
+          alert('you did it you cheater');
+          $('img').remove();
+          $('body').append('<img src="img/end.png" style="width: 100%"/>');
+          audio1.pause()
+          audio.play()
+          codePosition = 0;
+        }
+
+      } else {
+        codePosition = 0;
+      }
+    });
+
+
+
+
+    // if (event.keyCode === (38 && 40)){
+    //   alert ("38 was pressed")
+    // } else {
+    //   alert ("wrong one")
+    // }
+
+  // });
+</script>
+</body>
+</html>

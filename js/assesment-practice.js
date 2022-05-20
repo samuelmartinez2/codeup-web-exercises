@@ -52,10 +52,16 @@ const companies= [
 const ages = [33,12,20,16,5,54,21,44,61,13,15,45,25,64,32];
 
 
+let auTo = []
+for (let i =0; i < companies.length; i++) {
+    if (companies[i].category === "technology") {
+        auTo.push(companies[i].name);
+    }
+}
+console.log(auTo);
 
 
-
-    //
+//
     // companies.forEach(function(random){
     //     console.log(random);
     // })
@@ -83,10 +89,10 @@ function mostColorful(hamsters) {
 
 
 function nameAndCategory(companies){
-    let categoRy = {category:[]};
+    let categoRy =[];
     for (let categ of companies) {
         if (categ.category === "auto") {
-            categoRy = categ;
+            categoRy.push(categ.name);
         }
     }
     return categoRy
