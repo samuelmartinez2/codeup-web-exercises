@@ -47,19 +47,42 @@
         // liClass.css('border','1px solid red');
         //
 
+        //
+        // $("li").css('font-size', '20px')
+        // $('h1').css('background-color', 'blue')
+        // $('p').css('background-color', 'orange')
+        // $('li').css('background-color', 'pink')
+        // // $('h1,p,li').css('background-color', 'yellow')
+        //
+        // let h1Tag= $('h1').html();
+        // alert(h1Tag)
+        //
+        // $('h1').each(function (index. el) {
+        //     alert($(this).htnl());
+        // }
 
-        $("li").css('font-size', '20px')
-        $('h1').css('background-color', 'blue')
-        $('p').css('background-color', 'orange')
-        $('li').css('background-color', 'pink')
-        // $('h1,p,li').css('background-color', 'yellow')
+        $('h1').click(
+            function() {
+                $(this).css("background-color",'red');
+            })
 
-        let h1Tag= $('h1').html();
-        alert(h1Tag)
+        $('p').dblclick(
+            function() {
+                $(this).css({"font-size":"18px",'background-color':'yellow'});
+            }
+        )
 
-        $('h1').each(function (index. el) {
-            alert($(this).htnl());
-        }
+        $('li').hover(
+            function() {
+                $(this).css({"font-size":"45px",'background-color':'yellow','color':'red'});
+            },
+            function() {
+                $(this).css({"font-size":"15px",'background-color':'transparent','color':'black'});
+            }
+        )
+
+
+
 
     })
 
