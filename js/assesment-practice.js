@@ -62,13 +62,13 @@ console.log(auTo);
 
 
 function oldestStart(companies) {
-    let oldest = [];
+    let oldest = companies[0].start;             ///<<<give it a an item from the array to start with>>>>>////
     for( let i=0; i<companies.length; i++) {
         if (companies[i].start < oldest) {
         oldest= companies[i].start;
         }
     }
-    return oldest
+    return oldest;
 }
 
 console.log(oldestStart(companies));
@@ -573,11 +573,11 @@ console.log(countWords("abc"));
 //     and `numberOfDigits` which should count the number of digits in the argument passed into the function:
 
 
-function describeNumber(input) {
-    if (!NaN (parseFloat(input))) {
-        obj.input =
-    }
-}
+// function describeNumber(input) {
+//     if (!NaN (parseFloat(input))) {
+//         obj.input =
+//     }
+// }
 
 
 

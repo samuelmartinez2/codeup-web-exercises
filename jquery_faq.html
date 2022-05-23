@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery_faq.html</title>
+    <style>
+
+        .invisible {
+            visibility: hidden;
+            /*visibility: visible;*/
+        }
+
+        .highlighted {
+            background: #b4d455;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<h1>National Parks FAQ</h1>
+
+<dl>
+    <div>
+        <dt>Name</dt>
+        <dd class="invisible">Godzilla</dd>
+    </div>
+    <div>
+        <dt>Born</dt>
+        <dd class="invisible">1952</dd>
+    </div>
+    <div>
+        <dt>Birthplace</dt>
+        <dd class="invisible">Japan</ddinvisible>
+    </div>
+    <div>
+        <dt>Color</dt>
+        <dd class="invisible">Green</dd>
+    </div>
+</dl>
+
+<Button class="button"> click here </Button>
+<link rel="stylesheet" href="">
+
+<script src="js/jquery-3.6.0.js"></script>
+<script>
+    "use strict"
+
+$('button').click(function() {
+    $('dd').toggleClass('invisible')
+})
+$('dt').click(function() {
+    $(this).toggleClass('highlighted')
+})
+
+
+
+</script>
+
+</body>
+</html>

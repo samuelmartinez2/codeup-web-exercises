@@ -42,8 +42,6 @@
     // $(document).keyup(function(event){
     //   console.log(event.keyCode);
 
-
-
     let allowedKeys = {
       37: 'left', 38: 'up', 39: 'right', 40: 'down', 65: 'a', 66: 'b', 13: 'enter', 8: 'del'
     };
@@ -58,8 +56,8 @@
       let requiredCode = cheatCode[codePosition];
       // console.log(coDe);
       // console.log(requiredCode);
-      if (coDe == requiredCode) {
-        codePosition++;
+        if (coDe == requiredCode) {
+         codePosition++;
         if (codePosition == cheatCode.length - 3) {
           alert('are you cheating?');
           $('h1').css('background-color', 'red');
