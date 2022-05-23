@@ -23,38 +23,92 @@
 
 <dl>
     <div>
-        <dt>Name</dt>
-        <dd class="invisible">Godzilla</dd>
+        <dt>Is there a fee for camping at this park</dt>
+        <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus obcaecati omnis quia ut velit? Deleniti facere molestiae perspiciatis soluta unde. Aliquid animi commodi in tenetur! Consequuntur eos explicabo illo tempore!</dd>
     </div>
     <div>
-        <dt>Born</dt>
-        <dd class="invisible">1952</dd>
+        <dt>What are the native animals?</dt>
+        <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias animi architecto consectetur cumque eius eligendi est eveniet expedita harum illo in incidunt inventore, nisi officiis perferendis tempora ullam unde!</dd>
     </div>
     <div>
-        <dt>Birthplace</dt>
-        <dd class="invisible">Japan</ddinvisible>
+        <dt>is there hunting allowed</dt>
+        <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at fugiat illo iure labore quas temporibus velit! Alias autem debitis dignissimos eaque harum in, inventore libero, magni molestias praesentium sunt?</dd>
     </div>
     <div>
-        <dt>Color</dt>
-        <dd class="invisible">Green</dd>
+        <dt>Is there a fire danger</dt>
+        <dd class="invisible"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci eius quasi. Aperiam assumenda consequuntur ducimus, excepturi fugiat hic illo maiores maxime minima molestias non pariatur sed suscipit totam voluptate.</dd>
     </div>
 </dl>
+<Button class="button1"> click here </Button>
 
-<Button class="button"> click here </Button>
-<link rel="stylesheet" href="">
+<h3 id="national-parks-heading">National Parks</h3>
+<ul class="parks" id="national-parks">
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+
+</ul>
+<h3>State Parks of Texas</h3>
+<ul class="parks" id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+
+</ul>
+<h3>State Parks of Texas</h3>
+<ul class="parks" id="state-parks">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+
+</ul>
+
+
+
+<Button class="button2"> click for li change </Button>
+
 
 <script src="js/jquery-3.6.0.js"></script>
+
 <script>
     "use strict"
+$(function() {
+    $('.button1').click(function () {
+        $('dd').toggleClass('invisible')
+    })
+    $('dt').click(function () {
+        $(this).toggleClass('highlighted')
 
-$('button').click(function() {
-    $('dd').toggleClass('invisible')
-})
-$('dt').click(function() {
-    $(this).toggleClass('highlighted')
-})
+        ///*******THIS WILL ALSO WORK*******///////////
+    //     if ($ (this).css('background-color') !== 'rgba(0,0,0,0') {
+    //         $(this).css('background', 'red');
+    //     }else {
+    //         $(this).css('background-color', 'yellow');
 
+    })
 
+    $('.button2').click(function() {
+        $('li').each(function(index) {
+            if (index === 'li'.length) {
+                $(this).css('background-color', '#FF0');
+            }
+        });
+
+    // $('li:last-child').css('background-color', 'yellow')
+    });
+
+    $('h3').click(function() {
+        $(this).next().css('font-weight', 'bold')
+    })
+
+    $('li').click(function() {
+        $(this).parent().children().first().css('color','blue')
+    })
+
+});
 
 </script>
 
