@@ -20,41 +20,48 @@
   "use strict";
 
 
-  $(document).keyup(function (event){
-    if (event.keyCode === start) {
-      audio1.play();
-    } if (event.keyCode === cheaTer) {
-      alert('cheater');
-      $('body').append('<img src="img/cheater.jpeg" style="width: 100%"/>');
-    }
-    console.log(event.keyCode)
-  })
 
-  // $(document).keyup(function(event){
-  //   console.log(event.keyCode);
   let audio1 = new Audio('audio/first.mp3')
   let audio = new Audio('audio/01 Title.mp3');
-  let cheaTer = [8]
-  let start = [49]
+  let cheater = 8
+  let stop = 49
+  $(document).keyup(function (event) {
 
-  let allowedKeys = {
-      37: 'left', 38: 'up', 39: 'right', 40: 'down', 65:'a', 66:'b', 13:'enter', 8: 'del'
+      audio1.play();
+      // if (event.keyCode === stop) {
+      //   audio1.pause();
+      if (event.keyCode === cheater) {
+        audio1.pause();
+        alert('cheater');
+        $('body').append('<img src="img/cheater.jpeg" style="width: 100%"/>');
+      }
+      console.log(event.keyCode)
+
+    })
+
+    // $(document).keyup(function(event){
+    //   console.log(event.keyCode);
+
+
+
+    let allowedKeys = {
+      37: 'left', 38: 'up', 39: 'right', 40: 'down', 65: 'a', 66: 'b', 13: 'enter', 8: 'del'
     };
-  console.log(allowedKeys);
-  let cheatCode = ['up','up','down','down']
+    console.log(allowedKeys);
+    let cheatCode = ['up', 'up', 'down', 'down']
     // ,'left','right','left','right','b','a','enter']
 
     let codePosition = 0;
 
-    $(document).keydown(function(event){
+    $(document).keydown(function (event) {
       let coDe = allowedKeys[event.keyCode];
       let requiredCode = cheatCode[codePosition];
       // console.log(coDe);
       // console.log(requiredCode);
       if (coDe == requiredCode) {
         codePosition++;
-        if (codePosition == cheatCode.length-3) {
-          alert( 'are you cheating?');
+        if (codePosition == cheatCode.length - 3) {
+          alert('are you cheating?');
           $('h1').css('background-color', 'red');
         }
         if (codePosition == cheatCode.length) {
