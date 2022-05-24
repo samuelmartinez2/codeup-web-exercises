@@ -573,15 +573,18 @@ console.log(countWords("abc"));
 //     and `numberOfDigits` which should count the number of digits in the argument passed into the function:
 
 
-// function describeNumber(input) {
-//     if (!NaN (parseFloat(input))) {
-//         obj.input =
-//     }
-// }
+function describeNumber(input) {
+    if (!isNaN (parseFloat(input))) {
+        let obj ={};
+        obj.value= parseFloat(input);
+        obj.evenOrOdd= evenOrOdd(input);
+        obj.numberOfDigits= (input.toString().length);
 
+        return obj;
+    }
+}
 
-
-
+console.log(describeNumber());
 
 
 // function findHighestPrice(input) {
