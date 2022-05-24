@@ -91,17 +91,15 @@ $(function() {
     })
 
     $('.button2').click(function() {
-        $('li').each(function(index) {
-            if (index === 'li'.length) {
-                $(this).css('background-color', '#FF0');
-            }
-        });
+        $('ul').each(function(index) {
+            $(this).children().last().css("background","yellow");
+            });
 
     // $('li:last-child').css('background-color', 'yellow')
     });
 
     $('h3').click(function() {
-        $(this).next().css('font-weight', 'bold')
+        $(this).next().children().css('font-weight', 'bold')
     })
 
     $('li').click(function() {

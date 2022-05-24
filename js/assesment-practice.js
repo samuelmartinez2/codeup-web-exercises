@@ -54,7 +54,7 @@ const ages = [33,12,20,16,5,54,21,44,61,13,15,45,25,64,32];
 
 let auTo = []
 for (let i =0; i < companies.length; i++) {
-    if (companies[i].category === "technology") {
+    if (companies[i].category === "auto") {
         auTo.push(companies[i].name);
     }
 }
@@ -62,7 +62,7 @@ console.log(auTo);
 
 
 function oldestStart(companies) {
-    let oldest = companies[0].start;             ///<<<give it a an item from the array to start with>>>>>////
+    let oldest = companies[0].start;             ///<<<give it an item from the array to start with>>>>>////
     for( let i=0; i<companies.length; i++) {
         if (companies[i].start < oldest) {
         oldest= companies[i].start;
@@ -87,16 +87,6 @@ for(let i = 0; i < ages.length; i++) {
     }
 }
 console.log(canDrink);
-
-function mostColorful(hamsters) {
-    let mostColors = {fur : []};
-    for (let hamster of hamsters) {
-        if (hamster.fur.length > mostColors.fur.length) {
-            mostColors = hamster;
-        }
-    }
-    return mostColors;
-}
 
 
 function nameAndCategory(companies){
@@ -584,7 +574,7 @@ function describeNumber(input) {
     }
 }
 
-console.log(describeNumber());
+console.log(describeNumber(24));
 
 
 // function findHighestPrice(input) {
@@ -599,7 +589,108 @@ console.log(describeNumber());
 
 
 
+// Write a function that takes in an array of strings and returns a string of the first letters of each element concatenated together:
+
+function allFirstLetters(arrOfStrings) {
+    let bucket = "";
+    for (let i=0; i<arrOfStrings.length; i++){
+        bucket += arrOfStrings[i].substring(0,1);
+    }
+
+    // for (let str of arrOfStrings) {
+    // //     bucket += str.substring(0,1);
+    // }
+    return bucket;
+}
+
+const testArrStrings = ['dog', 'cat', 'frog', 'bat'];
+console.log(allFirstLetters(testArrStrings));
 
 
 
+// Create a function, returnProductEssentialDetails, that takes in a product object and returns a simpler product object containing only the product name and price in cents.
 
+// Examples...
+
+let product1 = {
+    name: 'Hammer',
+    priceInCents: 400,
+    description: 'It is a hammer.',
+    inventory: 25034
+}
+
+let product2 = {
+    name: 'Computer',
+    priceInCents: 40000,
+    description: 'It is a computer.',
+    inventory: 33000
+}
+
+let product3 = {
+    name: 'Ruler',
+    priceInCents: 1000,
+    description: 'It is a ruler.',
+    inventory: 2200
+}
+
+// let products = [product1,product2,product3]
+// function productNameandCents() {
+//
+//     let NameandPrice= [];
+//     for (let i=0; i<products.length; i++){
+//         NameandPrice.push(products[i].name,products[i].priceInCents);
+//     }
+//     console.log(NameandPrice);
+//     return NameandPrice
+// }
+//
+// console.log(productNameandCents(products));
+
+
+function returnProductEssentialDetails(product) {
+    return {
+        name: product.name,
+        priceInCents: product.priceInCents
+    }
+}
+
+let products = [product1, product2, product3];
+
+function returnAllProductsEssentialDetails(products) {
+    let productsOutput = [];
+    products.forEach(function(product) {
+        productsOutput.push(returnProductEssentialDetails(product));
+    });
+    return productsOutput;
+}
+
+console.log(returnAllProductsEssentialDetails(products));
+
+
+// Write a function that will accept a string. It should return an object with the following properties: string, size, containsLetterFromRSTLNE, and isOneWord.
+
+function makeObjectFromString(str) {
+    const obj = {};
+    obj.string = str;
+    obj.size = str.length;
+    obj.isOneWord = str.indexOf(" ") < 0;
+    let lc = str.toLowerCase();
+    if (lc.includes("r") || lc.includes("s") || lc.includes("t") || lc.includes("l") || lc.includes("n") || lc.includes("e")) {
+        obj.containsLetterFromRSTLNE = true;
+    } else {
+        obj.containsLetterFromRSTLNE = false;
+    }
+    return obj;
+}
+
+console.log(makeObjectFromString('tacocat'));
+console.log(makeObjectFromString('John Jacob'));
+console.log(makeObjectFromString('Kacy Bobby'));
+
+
+function UseMath(arr) {
+    return Math.min(...arr);
+}
+
+console.log(UseMath([4, 5, 8, 10]));
+console.log(UseMath([23, 45, 89, 113]));
