@@ -3,8 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>mapbox_maps_api.html</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <script src="js/geocode_utils.js"></script>
+
 </head>
 <body>
+<div id='map' style='width: 95vw; height: 75vh; margin: auto '></div>
+<h1 id="place"></h1>
+<script src="js/keys.js"></script>
+
+<script>
+    mapboxgl.accessToken = MAPBOX_API_KEY;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4946, 29.42], // starting position [lng, lat]
+        zoom: 9,// starting zoom
+    });
+
+    const MARKER = new mapboxgl.Marker()
+        .setLngLat([-98.4896, 29.4269])
+        .setDraggable(true)
+        .addTo(map);
+
+
+    geocode("1307 West Lynwood Ave, San Antonio, TX 78201", MAPBOX_API_KEY).then(function (data) {
+        console.log(data);
+        const MYFAVREST = new mapboxgl.Popup()
+            .setLngLat(data)
+            .setHTML("<p>This is my favorite restaurant</p>")
+            .addTo(map.setZoom(5))
+    });
+
+
+</script>
 
 </body>
 </html>
