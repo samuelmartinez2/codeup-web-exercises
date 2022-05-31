@@ -23,20 +23,106 @@
         zoom: 9,// starting zoom
     });
 
-    const MARKER = new mapboxgl.Marker()
+
+    const CITYMARKER = new mapboxgl.Marker()
         .setLngLat([-98.4896, 29.4269])
         .setDraggable(true)
         .addTo(map);
 
+    // CITYMARKER.setLngLat([-98.9878, 29.6870]);
 
-    geocode("1307 West Lynwood Ave, San Antonio, TX 78201", MAPBOX_API_KEY).then(function (data) {
-        console.log(data);
-        const MYFAVREST = new mapboxgl.Popup()
-            .setLngLat(data)
-            .setHTML("<p>This is my favorite restaurant</p>")
-            .addTo(map.setZoom(5))
-    });
+    function CITYANDREST () {
+        geocode("San Antonio tx", MAPBOX_API_KEY).then(function (data) {
+            let popUp = new mapboxgl.Popup()
+                .setHTML("<p>This is the city where my favorite restaurant is </p>");
+            const MYFAVCITY = new mapboxgl.Marker()
+                .setLngLat(data)
+                .addTo(map.setZoom(11))
+                .setPopup(popUp);
+            // popUp.addTo(map);
+        });
+    }
 
+    console.log(CITYANDREST());
+
+    function FAVREST () {
+        geocode("6155 Northwest Loop 410", MAPBOX_API_KEY).then(function (data) {
+            let popUp = new mapboxgl.Popup()
+                .setHTML("<p>This is Olive Garden </p>");
+            const MYFAVCITY = new mapboxgl.Marker()
+                .setLngLat(data)
+                .addTo(map.setZoom(10))
+                .setPopup(popUp);
+            // popUp.addTo(map);
+            console.log(data);
+        });
+
+    }
+
+    console.log(FAVREST());
+
+
+    function FAVREST2 () {
+        geocode("5403 Northwest Loop 410", MAPBOX_API_KEY).then(function (data) {
+            let popUp = new mapboxgl.Popup()
+                .setHTML("<p> This are Las Palapas </p>");
+            const MYFAVCITY = new mapboxgl.Marker()
+                .setLngLat(data)
+                .addTo(map.setZoom(10))
+                .setPopup(popUp);
+            // popUp.addTo(map);
+            console.log(data);
+        });
+    }
+    console.log(FAVREST2());
+
+    function FAVREST3 () {
+        geocode("5450 Northwest Loop 410", MAPBOX_API_KEY).then(function (data) {
+            let popUp = new mapboxgl.Popup()
+                .setHTML("<p> This is Red Lobster </p>"+ restaurants.name + restaurants.food);
+            const MYFAVCITY = new mapboxgl.Marker()
+                .setLngLat(data)
+                .addTo(map.setZoom(10))
+                .setPopup(popUp);
+            // popUp.addTo(map);
+            console.log(data);
+        });
+    }
+    console.log(FAVREST3());
+
+
+    let restaurants = [
+        {
+            name: "olive garden",
+            food: "italian",
+            coordinates: [
+                -98.615182,
+                29.471175
+            ]
+        }, {
+            name: "las palapas",
+            food: "mexican",
+            coordinates: [
+                -98.592688,
+                29.48594
+            ]
+        }, {
+            name: "Red lobster",
+            food: "sea food",
+            coordinates: [
+                -98.592498,
+                29.485633
+            ]
+        }
+    ];
+
+    restaurants.forEach(function(restaurant) {
+        let marker = new mapboxgl.Marker()
+            .setLngLat(restaurant.coordinates)
+            .addTo(map)
+    })
+
+    console.log(map);
 
 </script>
 
