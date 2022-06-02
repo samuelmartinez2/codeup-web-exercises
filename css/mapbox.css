@@ -1,13 +1,16 @@
 
 
-.day{
+.week{
 
    background-color: #cbffcd;
     text-align: center;
-    justify-items: center;
+
     border-radius: 10px;
     margin: 10px;
     background-repeat: no-repeat;
+    background-position: center;
+    -moz-text-size-adjust: auto;
+
 
 
 
