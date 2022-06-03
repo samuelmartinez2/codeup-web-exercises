@@ -44,3 +44,9 @@ const moreT3 = users.filter(function(x) {
 console.log(moreT3);
 
 // const moreT3 = users.filter(n => languages[] > 3);
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const evens = numbers.filter((n) => (n % 2 === 0));
+console.log(evens);
+
