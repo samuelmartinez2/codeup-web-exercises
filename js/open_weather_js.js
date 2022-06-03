@@ -11,21 +11,14 @@ const URL = "https://api.openweathermap.org/data/2.5/onecall";
 //     console.log(results.daily[0])
 // })
 
-    //
 function getSearchInput(){
     return ($('#data').val());
-    // console.log(`search method: ${val}`);
-
-
 }
 
 $('#btn').click(function(){
     updateWeather(getSearchInput());
 });
-
-// // console.log(getSearchInput());
-//
-
+// console.log(getSearchInput());
 
 function updateWeather(cityName){
     geocode(cityName, MAPBOX_API_KEY).then(function (data) {
@@ -54,8 +47,6 @@ function updateWeather(cityName){
                 })
                 return dayDate + " min " + dayMin +" max " + dayMax
             }
-
-
 
             let Valu=date + " min " + results.daily[0].temp.min + " max " + results.daily[0].temp.max
             // $("#icon").css("background-image", "url('http://openweathermap.org/img/w/" + results.daily[0].weather[0].icon + ".png')")
@@ -90,6 +81,8 @@ function updateWeather(cityName){
 //
 // const iconURL = "http://openweathermap.org/img/w/" + iconID + ".png"
 
+
+
 mapboxgl.accessToken = MAPBOX_API_KEY;
 const map = new mapboxgl.Map({
     container: 'map', // container ID
@@ -99,6 +92,7 @@ const map = new mapboxgl.Map({
 
 });
 
+
 const CITYMARKER = new mapboxgl.Marker()
     .setLngLat([-98.4896, 29.4269])
     .setDraggable(true)
@@ -107,25 +101,14 @@ const CITYMARKER = new mapboxgl.Marker()
 let LONG_LAT = [];
 
 CITYMARKER.on("dragend", function () {
-    LONG_LAT = CITYMARKER.getLngLat();
+    LONG_LAT = CITYMARKER.getLngLat()
     // document.getElementById("place").innerHTML = LONG_LAT.lng + ", " + LONG_LAT.lat;
     map.flyTo({center: [LONG_LAT.lng, LONG_LAT.lat]});
     reverseGeocode(LONG_LAT, MAPBOX_API_KEY).then(function (data) {
+        console.log(data);
         return updateWeather(data);
-        console.log(updateWeather(data))
-        // $.get(URL, {
-        //     APPID: OPEN_WEATHER_APPID,
-        //     lat: data[1],
-        //     lon: data[0],
-        //     units: "imperial"
-        // }).done(function (results) {
-        //     console.log(results);
-        //     console.log(URL);
-        // })
     })
 });
-
-
 
 
 
