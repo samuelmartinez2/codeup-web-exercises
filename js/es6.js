@@ -93,9 +93,7 @@ const{name,email,languages} = user
   // TODO: rewrite the assignment below to use template strings
   developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
 
-  developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
-
-  developers.push("${name}'s email is ${email}, ${name} knows ${languages.join(,)}");
+  developers.push(`${name}'s email is ${email}, ${name} knows ${languages.join(',')}`);
   console.log(developers);
 });
 
@@ -105,10 +103,35 @@ let list = '<ul>';
 // TODO: rewrite the following loop to use a for..of loop
 // developers.forEach(function (developer) {
 
-  for (let developer of developers){
+  for (let developer of developers) {
 
   // TODO: rewrite the assignment below to use template strings
-  list += '<li>' + developer + '</li>';
+  list += `<li>${developer}</li>`;
 
-});
+}
 list += '</ul>';
+console.log(list);
+// document.querySelector("body").innerHTML += list;
+$("body").html(list)
+
+const numbers = [1, 2, 3, 4, 5];
+
+const sum = numbers.reduce((accumulation, currentNumber) => {
+  console.log(accumulation);
+  console.log(currentNumber);
+  return accumulation + currentNumber;
+}, 0);
+
+console.log(sum);
+
+const salesPeople = [
+  {name: 'Jim Halpert', sales: 100},
+  {name: 'Dwight Schrute', sales: 50},
+  {name: 'Andy Bernard', sales: 150},
+];
+
+const totalSales = salesPeople.reduce((total, person) => {
+  return total + person.sales;
+}, 0);
+
+console.log(totalSales);
