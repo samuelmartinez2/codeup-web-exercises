@@ -85,12 +85,14 @@ console.log(averAge);
 const emailStr =users.reduce((num1,longest) => {
     let str = longest.email.toString();
     let length = str.length;
-    if (num1 > length) {
+    if (num1 > str) {
         num1 = longest;
+    }else{
+        return str
     }
     console.log(str);
     console.log(length);
-    return  longest.email
+    // return  str
 
 },0);
 
