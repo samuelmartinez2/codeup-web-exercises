@@ -101,3 +101,25 @@ const sayHello = (name) => {
 
 
 console.log(sayHello('test'));
+
+
+const isDivisibleBy3 = n => n % 3 === 0;
+
+const numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+console.log(numbers1.filter(isDivisibleBy3));
+console.log(numbers1);
+
+if (true) {
+    let x = 5;
+}
+console.log(typeof x);
+
+const sayHello1 = (name) => `Hello, ${name}!`
+
+console.log(sayHello1("test)"));
+
+let numbers2 = [1, 2, 3, 4, 5];
+numbers2.map(n => n * 3)
+
+console.log(numbers2);
